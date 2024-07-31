@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import ConnectionStatus from './ConnectionStatus';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -30,6 +31,9 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="ConnectionStatus" options={{ headerShown: false }} />
+        <Stack.Screen name="LocationApp" options={{ headerShown: false }} />
+        <Stack.Screen name="Verify" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
